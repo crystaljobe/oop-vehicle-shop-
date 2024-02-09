@@ -50,21 +50,20 @@ def main_menu():
     console.print(table)
     console.rule("[b]End Main Menu[/b]", style="blue")
     
-
-# get user car info
+# add a car
 def add_car():
-    car_make = input("Enter your car's make:")
-    car_model = input("Enter your car's model:")
-    car_year = input("Enter your car's year:")
-    car_mileage = input("Enter your car's current mileage:")
-    car_services = input("Enter any services your car's had separated by commas:")
+    car_make = input("Enter your car's make: ")
+    car_model = input("Enter your car's model: ")
+    car_year = input("Enter your car's year: ") 
+    car_mileage = input("Enter your car's current mileage: ")
+    car_services = input("Enter any services your car's had separated by commas: ")
     car_services_list = car_services.split(',')
     # create instance using the var entered
     owner_name_input = input("Enter your last name:")
     owner_name = CarManager(car_make, car_model, car_year, car_mileage, car_services_list)
     exit()
-    
-# see all cars
+
+# See all cars
 def all_cars():
     console.print(CarManager.all_cars)
     exit()
